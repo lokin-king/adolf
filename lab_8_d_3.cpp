@@ -4,26 +4,26 @@ using namespace std;
 
 string getSeason(int month) {
     if (month == 12 || month == 1 || month == 2) {
-        return "Зима";
+        return "zim";
     } else if (month >= 3 && month <= 5) {
-        return "Весна";
+        return "vesn";
     } else if (month >= 6 && month <= 8) {
-        return "Літо";
+        return "lito";
     } else if (month >= 9 && month <= 11) {
-        return "Осінь";
+        return "osin";
     } else {
-        return "Неправильний номер місяця";
+        return "ne to";
     }
 }
 
 int main() {
     int month;
 
-    cout << "Введіть номер місяця (1-12): ";
+    cout << " (1-12): ";
     cin >> month;
 
     string season = getSeason(month);
-    cout << "Пора року: " << season << endl;
+    cout <<  season << endl;
 
     return 0;
 }
