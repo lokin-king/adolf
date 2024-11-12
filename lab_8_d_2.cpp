@@ -28,7 +28,7 @@ int main() {
 
     cout << "(N, E, S, W): ";
     cin >> startDirection;
-    cout <<  (0 - primo, 1 - livo, -1 - pravo): ";
+    cout << " (0 - primo, 1 - livo, -1 - pravo): ";
     cin >> command;
 
     char newDirection = changeDirection(startDirection, command);
