@@ -7,36 +7,34 @@ int main() {
     double x, y;
     int choice;
 
-    // Введення значень x, y та вибір функції f(x)
-    cout << "Введіть значення x: ";
+
+    cout << "x: ";
     cin >> x;
-    cout << "Введіть значення y: ";
+    cout << "y: ";
     cin >> y;
-    cout << "Виберіть функцію f(x):\n1. sh(x)\n2. x^2\n3. e^x\n";
+    cout << " f(x):\n1. sh(x)\n2. x^2\n3. e^x";
     cin >> choice;
 
     double fx;
-    // Вибір функції f(x) залежно від вибору користувача
     switch (choice) {
         case 1:
-            fx = sinh(x); // sh(x)
+            fx = sinh(x); 
             break;
         case 2:
-            fx = x * x; // x^2
+            fx = x * x;
             break;
         case 3:
-            fx = exp(x); // e^x
+            fx = exp(x); 
             break;
         default:
-            cout << "Невірний вибір функції!" << endl;
+            cout << "ne to!" << endl;
             return 1;
     }
 
-    // Обчислення значення |xy|
+
     double absXY = fabs(x * y);
     double s;
 
-    // Обчислення значення s в залежності від |xy|
     if (absXY > 10) {
         s = fx + log(y);
     } else if (absXY > 5 && absXY <= 10) {
@@ -44,12 +42,12 @@ int main() {
     } else if (absXY == 5) {
         s = sin(x) + tan(y);
     } else {
-        cout << "Значення |xy| не підходить для визначених умов." << endl;
+        cout << "|xy| ne to." << endl;
         return 1;
     }
 
-    // Виведення результату
-    cout << "Результат s: " << s << endl;
+
+    cout << " s: " << s << endl;
 
     return 0;
 }
